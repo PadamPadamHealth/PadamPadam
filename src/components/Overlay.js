@@ -5,10 +5,10 @@ import "../stylesheets/overlay.css";
 export function Overlay({isOpen, children}) {
   return (
     <Fragment>
-      <!--Renders a div if isOpen prop is true -->
+      {/*<!--Renders a div if isOpen prop is true -->*/}
       {isOpen && (
         <div className="overlay">
-          <!--Renders whatever you pass in to this component inside the parent div.-->
+          {/*<!--Renders whatever you pass in to this component inside the parent div.-->*/}
           {children}
         </div>
       )}

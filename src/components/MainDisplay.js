@@ -1,10 +1,10 @@
 import React from "react";
 import ReviewFeed from "./MainDisplayComponents/ReviewFeed";
 
-const MainPage = () => {
+const MainDisplay = () => {
   return (
     <div>
-      <h1>I am Main Page</h1>
+      <h1>I am Main Display</h1>
       <div>
         <h2>I am Filter Div</h2>
       </div>
@@ -15,4 +15,4 @@ const MainPage = () => {
   )
 }
 
-export default MainPage;
+export default MainDisplay;

@@ -1,26 +1,44 @@
-import React from 'react';
+import { React, useState } from 'react';
+import { Link, Route, Routes } from 'react-router-dom';
 import Login from './Login.js';
-import Overlay from './components/overlay.js'
+// import Overlay from './components/Overlay.js';
+import MainDisplay from './MainDisplay.js';
 
 const App = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleOverlay = () => {
-    setIsOpen(!isOpen);
-  };
 
   return (
-    <div>
-      <h1>I am App</h1>
-    <div className="App">
-      <h1>Sign Up</h1>
-      <button onClick={toggleOverlay}>Open</button>
-      <Overlay isOpen={isOpen} onClose={toggleOverlay}>
-        <div>Overlay is working</div>
-      </Overlay>
-      <Login />
-    </div>
-    </div>
+    <>
+      <nav id='navbar'>
+        <section id='left-nav'>
+          {/*add image tag for logo*/}
+        </section>
+        <section id='right-nav'>
+          <input placeholder="enter city or zip code"/>
+          <button id='search-btn'>
+            Search
+          </button>
+          <Link to='/Login'>
+            <button id='login-btn'>
+              Log In
+            </button>
+          </Link>
+        </section>
+      </nav>
+      <Routes>
+        <Route 
+          path='/'
+          element={
+            <MainDisplay />
+          }
+        />
+        <Route 
+          path='/Login'
+          element={
+            <Login />
+          }
+        />
+      </Routes>
+    </>
   )
 }
 
