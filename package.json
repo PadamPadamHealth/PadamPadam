@@ -20,7 +20,9 @@
   "homepage": "https://github.com/PadamPadamHealth/PadamPadam#readme",
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router": "^6.14.0",
+    "react-router-dom": "^6.14.0"
   },
   "devDependencies": {
     "@babel/core": "^7.22.5",
