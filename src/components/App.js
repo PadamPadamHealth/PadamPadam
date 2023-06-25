@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, Route, Routes } from 'react-router-dom';
 import Login from './Login.js';
-// import Overlay from './components/Overlay.js';
+import Overlay from './Overlay.js';
 import MainDisplay from './MainDisplay.js';
 
 const App = () => {
@@ -13,7 +13,7 @@ const App = () => {
   return (
     <>
     <div>
-      <h1>I am App.js</h1>
+      <h1>Padam Padam Health</h1>
     </div>
           {/*add image tag for logo*/}
       <nav id='navbar'>
