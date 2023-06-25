@@ -12,3 +12,7 @@ root.render (
     <App />
   </BrowserRouter>
 )
+
+// root.render (
+//     <App />
+// )

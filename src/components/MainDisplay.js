@@ -9,7 +9,8 @@ const MainDisplay = () => {
         <h2>I am Filter Div</h2>
       </div>
       <div>
-        <ReviewFeed />
+        <h2>I am ReviewFeed</h2>
+        {/* <ReviewFeed /> */}
       </div>
     </div>
   )
