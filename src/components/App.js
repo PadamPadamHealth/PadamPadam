@@ -4,7 +4,7 @@ import Login from './Login.js';
 const App = () => {
   return (
     <div>
-      <h1>Hello World</h1>
+      <h1>I am App</h1>
       <Login />
     </div>
   )
