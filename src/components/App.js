@@ -1,6 +1,6 @@
 import React from 'react';
 import Login from './Login.js';
-import Overlay from './components/overlay.js'
+import Overlay from './/overlay.js'
 
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
