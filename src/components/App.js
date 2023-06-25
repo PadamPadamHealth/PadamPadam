@@ -10,6 +10,8 @@ const App = () => {
   };
 
   return (
+    <div>
+      <h1>I am App</h1>
     <div className="App">
       <h1>Sign Up</h1>
       <button onClick={toggleOverlay}>Open</button>
@@ -17,6 +19,7 @@ const App = () => {
         <div>Overlay is working</div>
       </Overlay>
       <Login />
+    </div>
     </div>
   )
 }
