@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const reviewSchema = Schema({
+  providerId: { type: Number, required: true, unique: true },
   providerName: { type: String, required: true },
   pronouns: { type: String },
   specialty: { type: String, required: true },
