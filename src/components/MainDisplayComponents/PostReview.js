@@ -2,9 +2,31 @@ import React, { useState } from "react";
 
 const PostReview = () => {
   let providerType = [
-
+    { label: "Allergist/Immunologist", value: "Allergist/Immunologist" },
+    { label: "Cardiologist", value: "Cardiologist" },
+    { label: "Dermatologist", value: "Dermatologist" },
+    { label: "Endocrinologist", value: "Endocrinologist" },
+    { label: "Family Medicine", value: "Family Medicine" },
+    { label: "Gastroenterologist", value: "Gastroenterologist" },
+    { label: "Geriatric Medicine", value: "Geriatric Medicine" },
+    { label: "Infectious Disease", value: "Infectious Disease" },
+    { label: "Neurologist", value: "Neurologist" },
+    { label: "OB/GYN", value: "OB/GYN" },
+    { label: "Oncologist", value: "Oncologist" },
+    { label: "Ophthalmologist", value: "Ophthalmologist" },
+    { label: "Osteopath", value: "Osteopath" },
+    { label: "Pathologist", value: "Pathologist" },
+    { label: "Pediatrician", value: "Pediatrician" },
+    { label: "Plastic Surgery", value: "Plastic Surgery" },
+    { label: "Psychiatrist", value: "Psychiatrist" },
+    { label: "Pulmonologist", value: "Pulmonologist" },
+    { label: "Rheumatologist", value: "Rheumatologist" },
+    { label: "Sleep Medicine", value: "Sleep Medicine" },
+    { label: "Sports Medicine", value: "Sports Medicine" },
+    { label: "General Surgery", value: "General Surgery" },
+    { label: "Urologist", value: "Urologist" },
   ];
-  let [specialty, setSpecialty] = useState("");
+  let [specialty, setSpecialty] = useState("specialty");
 
   return (
     <div>
@@ -35,7 +57,25 @@ const PostReview = () => {
             <option value='DEFAULT' disabled>
               Select type of provider
             </option>
-            <option value='Family Medicine'>Family Medicine</option>
+          </select>
+          <label>Pronouns:</label>
+          <select
+            className='pronounsDropDown'
+            name='pronouns'
+            type='text'
+            value={pronouns}
+            onChange={(e) => {
+              setPronouns(e.target.value);
+            }}
+            defaultValue={'DEFAULT'}
+          >
+            <option value='DEFAULT' disabled>
+              Provider's pronouns?
+            </option>
+            <option value='she/her'>she/her</option>
+            <option value='he/him'>he/him</option>
+            <option value='they/them'>they/them</option>
+            <option value='other'>other</option>
           </select>
           <label>Address:</label>
           <input
@@ -57,25 +97,31 @@ const PostReview = () => {
               setRating(e.target.value);
             }}
           />
-          <label>Pronouns:</label>
-          <select
-            className='pronounsDropDown'
-            name='pronouns'
+          <label>Link/Website URL:</label>
+          <input
             type='text'
-            value={pronouns}
+            name='url'
+            placeholder='http//:...'
+            value={url}
             onChange={(e) => {
-              setPronouns(e.target.value);
+              setURL(e.target.value);
             }}
-            defaultValue={'DEFAULT'}
-          >
-            <option value='DEFAULT' disabled>
-              Provider's pronouns?
-            </option>
-            <option value='she/her'>she/her</option>
-            <option value='he/him'>he/him</option>
-            <option value='they/them'>they/them</option>
-            <option value='other'>other</option>
-          </select>
+          />
+          <form>
+            <label>Tags:</label>
+            <input type="checkbox" id="tag1" name="transHealth" value="Trans Health"/>
+            <label for="tag1">Trans Health</label><br/>
+            <input type="checkbox" id="tag2" name="LGBTQ+" value="LGBTQ+"/>
+            <label for="tag2">LGBTQ+</label><br/>
+            <input type="checkbox" id="tag3" name="Ally" value="Ally"/>
+            <label for="tag3">Ally</label><br/>
+            <input type="checkbox" id="tag4" name="POC" value="POC"/>
+            <label for="tag3">POC</label><br/>
+            <input type="checkbox" id="tag4" name="WOC" value="WOC"/>
+            <label for="tag4">WOC</label><br/>
+            <input type="checkbox" id="tag4" name="genderAffirmingCare" value="Gender Affirming Care"/>
+            <label for="tag4">Gender Affirming Care</label><br/>
+          </form>
           <label>Review:</label>
           <input
             type='text'
