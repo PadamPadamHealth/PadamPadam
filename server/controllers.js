@@ -1,1 +1,3 @@
-const User = require('/*insert a path*/')
+const User = require('./models/usermodel.js');
+
+const userController = {};
