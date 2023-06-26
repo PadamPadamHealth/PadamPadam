@@ -4,6 +4,7 @@ import Login from './Login.js';
 import Overlay from './Overlay.js';
 import MainDisplay from './MainDisplay.js';
 import PostReview from './MainDisplayComponents/PostReview.js';
+let navbarImg = require('./assets/padam.png');
 import '../stylesheets/index.css'
 
 const App = () => {
@@ -18,7 +19,7 @@ const App = () => {
       <h1>Padam Padam Health</h1>
       <nav id='navbar'>
         <section id='left-nav'>
-          {/*add image tag for logo*/}
+        <img id='navbarImg' src={navbarImg.default} />
         </section>
         <section id='right-nav'>
           <input placeholder="enter city or zip code"/>
