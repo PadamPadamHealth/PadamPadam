@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import { Link } from 'react-router-dom';
 import ReviewFeed from "./MainDisplayComponents/ReviewFeed";
 import Login from './Login.js';
 import "../stylesheets/mainDisplay.css"
@@ -11,9 +12,12 @@ const MainDisplay = () => {
       <div>
         <h2>Filters</h2>
       </div>
+      <Link to='/PostReview'>
+        <button>Post Review</button>
+      </Link>
       <div>
         <h2>Doctor Reviews</h2>
-        {/* <ReviewFeed /> */}
+        <ReviewFeed />
       </div>
     </div>
   )
