@@ -4,6 +4,7 @@ import Login from './Login.js';
 import Overlay from './Overlay.js';
 import MainDisplay from './MainDisplay.js';
 import PostReview from './MainDisplayComponents/PostReview.js';
+let navbarImg = require('./assets/padam.png');
 
 const App = () => {
 //   //first create user tokens and store in local memory. Will eventually store tokens in DB
@@ -16,7 +17,7 @@ const App = () => {
     <>
       <nav id='navbar'>
         <section id='left-nav'>
-          {/*add image tag for logo*/}
+        <img id='navbarImg' src={navbarImg.default} />
         </section>
         <section id='right-nav'>
           <input placeholder="enter city or zip code"/>
