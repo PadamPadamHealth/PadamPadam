@@ -4,6 +4,7 @@ import Login from './Login.js';
 import Overlay from './Overlay.js';
 import MainDisplay from './MainDisplay.js';
 import PostReview from './MainDisplayComponents/PostReview.js';
+import '../stylesheets/index.css'
 
 const App = () => {
 //   //first create user tokens and store in local memory. Will eventually store tokens in DB
@@ -14,6 +15,7 @@ const App = () => {
 // }
   return (
     <>
+      <h1>Padam Padam Health</h1>
       <nav id='navbar'>
         <section id='left-nav'>
           {/*add image tag for logo*/}
