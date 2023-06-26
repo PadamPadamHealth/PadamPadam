@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import ReviewFeed from "./MainDisplayComponents/ReviewFeed";
 import Login from './Login.js';
+import "../stylesheets/mainDisplay.css"
 
 const MainDisplay = () => {
   
