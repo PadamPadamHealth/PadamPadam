@@ -14,11 +14,11 @@ const Login = () => {
   };
 
   //first create user tokens and store in local memory. Will eventually store tokens in DB
-  const [token, setToken] = useState();
+  //const [token, setToken] = useState();
   //this conditional statement means that Login will display if user token is falsy. the set token function is being passed to the login component
-  if (!token) {
-    return <Login setToken={setToken}/>
-  }
+  // if (!token) {
+  //   return <Login setToken={setToken}/>
+  // }
 
   return (
     <div class="overlay">
