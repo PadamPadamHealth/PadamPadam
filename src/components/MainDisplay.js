@@ -7,12 +7,12 @@ const MainDisplay = () => {
   
   return (
     <div>
-      <h1>I am Main Display</h1>
+      <h1>Welcome</h1>
       <div>
-        <h2>I am Filter Div</h2>
+        <h2>Filters</h2>
       </div>
       <div>
-        <h2>I am ReviewFeed</h2>
+        <h2>Doctor Reviews</h2>
         {/* <ReviewFeed /> */}
       </div>
     </div>
