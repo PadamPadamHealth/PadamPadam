@@ -2,15 +2,30 @@
 
 // button.addEventListener("click", () => console.log("hello"))
 // console.log("hello")
-import React from "react";
+import React, { useState } from "react";
+import Signup from "./Signup";
+import "../stylesheets/login.css"
 
 const Login = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleOverlay = () => {
+    setIsOpen(!isOpen);
+  };
+
+  //first create user tokens and store in local memory. Will eventually store tokens in DB
+  //const [token, setToken] = useState();
+  //this conditional statement means that Login will display if user token is falsy. the set token function is being passed to the login component
+  // if (!token) {
+  //   return <Login setToken={setToken}/>
+  // }
+
   return (
     <div class="overlay">
-      <input class="userName" placeholder="username"/>
-      <input class="userpassword" placeholder="password"/>
+      <input class="input" placeholder="username"/>
+      <input class="input" placeholder="password"/>
       <button class="login">login</button>
-      <a class="signup">Signup</a>
+      <button class="signup" onClick={toggleOverlay}>Signup</button>
     </div>
   )
 }

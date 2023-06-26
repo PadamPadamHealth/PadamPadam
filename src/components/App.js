@@ -1,26 +1,59 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link, Route, Routes } from 'react-router-dom';
 import Login from './Login.js';
-import Overlay from './/overlay.js'
+import Overlay from './Overlay.js';
+import MainDisplay from './MainDisplay.js';
 
 const App = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleOverlay = () => {
-    setIsOpen(!isOpen);
-  };
-
+  //first create user tokens and store in local memory. Will eventually store tokens in DB
+const [token, setToken] = useState();
+//this conditional statement means that Login will display if user token is falsy. the set token function is being passed to the login component
+if (!token) {
+  return <Login setToken={setToken}/>
+}
+  // return (
+//   <div>
+//     <h1>Hello World Im App</h1>
+//   </div>
+// )
   return (
+    <>
     <div>
-      <h1>I am App</h1>
-    <div className="App">
-      <h1>Sign Up</h1>
-      <button onClick={toggleOverlay}>Open</button>
-      <Overlay isOpen={isOpen} onClose={toggleOverlay}>
-        <div>Overlay is working</div>
-      </Overlay>
-      <Login />
+      <h1>Padam Padam Health</h1>
     </div>
-    </div>
+          {/*add image tag for logo*/}
+      <nav id='navbar'>
+        <section id='left-nav'>
+        </section>
+        <section id='right-nav'>
+          <input placeholder="enter city or zip code"/>
+          <button id='search-btn'>
+            Search
+          </button>
+          <Link to='/Login'>
+            <button id='login-btn'>
+              Log In
+            </button>
+          </Link>
+        </section>
+      </nav>
+       <Routes>
+         <Route 
+          path='/'
+          element={
+          <MainDisplay 
+           token={token}
+           />
+          }
+        />
+        <Route 
+          path='/Login'
+          element={
+            <Login />
+          }
+        />
+      </Routes>
+    </>
   )
 }
 

@@ -1,18 +1,21 @@
-import React from "react";
+import React, {useState} from "react";
 import ReviewFeed from "./MainDisplayComponents/ReviewFeed";
+import Login from './Login.js';
 
-const MainPage = () => {
+const MainDisplay = () => {
+  
   return (
     <div>
-      <h1>I am Main Page</h1>
+      <h1>I am Main Display</h1>
       <div>
         <h2>I am Filter Div</h2>
       </div>
       <div>
-        <ReviewFeed />
+        <h2>I am ReviewFeed</h2>
+        {/* <ReviewFeed /> */}
       </div>
     </div>
   )
 }
 
-export default MainPage;
+export default MainDisplay;
