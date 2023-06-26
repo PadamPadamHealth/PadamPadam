@@ -1,1 +1,1 @@
-const User = 
+const User = require('/*insert a path*/')
