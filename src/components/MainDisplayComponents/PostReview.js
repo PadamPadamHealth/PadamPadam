@@ -26,11 +26,17 @@ const PostReview = () => {
     { label: "General Surgery", value: "General Surgery" },
     { label: "Urologist", value: "Urologist" },
   ];
-  let [specialty, setSpecialty] = useState("specialty");
+  let [specialty, setSpecialty] = useState('');
+  let [pronouns, setPronouns] = useState('');
+  let [provider, setProvider] = useState('');
+  let [address, setAddress] = useState('');
+  let [rating, setRating] = useState();
+  let [url, setURL] = useState('');
+  let [review, setReview] = useState('');
 
   return (
     <div>
-      <h2>Post a Review</h2>
+      <h3>I am Post Review</h3>
       <div id='reviewPostBox'>
         <form id='reviewForm'>
           <label>Provider:</label>
@@ -42,7 +48,7 @@ const PostReview = () => {
             onChange={(e) => {
               setProvider(e.target.value);
             }}
-          />
+          /><br/>
           <label>Specialty:</label>
           <select
             className='specialtyDropDown'
@@ -57,7 +63,8 @@ const PostReview = () => {
             <option value='DEFAULT' disabled>
               Select type of provider
             </option>
-          </select>
+            {providerType.map((provider) => <option key={provider.label} value={provider.value}>{provider.label}</option>)}
+          </select><br/>
           <label>Pronouns:</label>
           <select
             className='pronounsDropDown'
@@ -76,7 +83,7 @@ const PostReview = () => {
             <option value='he/him'>he/him</option>
             <option value='they/them'>they/them</option>
             <option value='other'>other</option>
-          </select>
+          </select><br/>
           <label>Address:</label>
           <input
             type='text'
@@ -86,7 +93,7 @@ const PostReview = () => {
             onChange={(e) => {
               setAddress(e.target.value);
             }}
-          />
+          /><br/>
           <label>Rating:</label>
           <input
             type='number'
@@ -96,7 +103,7 @@ const PostReview = () => {
             onChange={(e) => {
               setRating(e.target.value);
             }}
-          />
+          /><br/>
           <label>Link/Website URL:</label>
           <input
             type='text'
@@ -106,22 +113,20 @@ const PostReview = () => {
             onChange={(e) => {
               setURL(e.target.value);
             }}
-          />
+          /><br/>
           <form>
-            <label>Tags:</label>
+            <label>Tags:</label><br/>
             <input type="checkbox" id="tag1" name="transHealth" value="Trans Health"/>
             <label for="tag1">Trans Health</label><br/>
             <input type="checkbox" id="tag2" name="LGBTQ+" value="LGBTQ+"/>
             <label for="tag2">LGBTQ+</label><br/>
-            <input type="checkbox" id="tag3" name="Ally" value="Ally"/>
-            <label for="tag3">Ally</label><br/>
+            <input type="checkbox" id="tag3" name="genderAffirmingCare" value="Gender Affirming Care"/>
+            <label for="tag3">Gender Affirming Care</label><br/>
             <input type="checkbox" id="tag4" name="POC" value="POC"/>
-            <label for="tag3">POC</label><br/>
-            <input type="checkbox" id="tag4" name="WOC" value="WOC"/>
-            <label for="tag4">WOC</label><br/>
-            <input type="checkbox" id="tag4" name="genderAffirmingCare" value="Gender Affirming Care"/>
-            <label for="tag4">Gender Affirming Care</label><br/>
-          </form>
+            <label for="tag4">POC</label><br/>
+            <input type="checkbox" id="tag5" name="WOC" value="WOC"/>
+            <label for="tag5">WOC</label><br/>
+          </form><br/>
           <label>Review:</label>
           <input
             type='text'

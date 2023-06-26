@@ -16,7 +16,7 @@ const MainDisplay = () => {
       </Link>
       <div>
         <h2>I am ReviewFeed</h2>
-        {/* <ReviewFeed /> */}
+        <ReviewFeed />
       </div>
     </div>
   )
