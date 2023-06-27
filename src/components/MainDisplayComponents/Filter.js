@@ -80,7 +80,7 @@ const Filter = () => {
             </select><br/>
             <label>...</label><br/>
             <button className='filter-btn'>
-              Submit
+              Search
             </button>
           </form>
       </div>
