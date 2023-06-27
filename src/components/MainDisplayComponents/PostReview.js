@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../../stylesheets/postReview.css"
 
 const PostReview = () => {
   let providerType = [
