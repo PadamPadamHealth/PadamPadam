@@ -1,3 +1,54 @@
-# {
-  
+#main-display {
+  display: grid;
+  color: #36454f;
+  grid-template-rows: 8vh 92vh;
+  grid-template-columns: 30vw 70vw;
+  grid-template-areas: 
+    "button button"
+    "filterDisplay reviewFeed";
+  place-items: center;
+}
+
+#filter {
+  grid-area: filter;
+  justify-self: start;
+  padding-left: 3vw;
+  width: auto;
+}
+
+#post-button {
+  grid-area: button;
+  justify-self: end;
+  padding-right: 3vw;
+  padding-bottom: 1vh;
+}
+
+#filter-display {
+  grid-area: filterDisplay;
+  background-color: whitesmoke;
+  height: 100%;
+  width: 90%;
+  padding: 10px;
+}
+
+#review-display {
+  grid-area: reviewFeed;
+  background-color: whitesmoke;
+  height: 100%;
+  width: 90%;
+  padding: 10px;
+  display: grid;
+  grid-template-rows: auto;
+}
+
+.review-btn {
+  margin: 0px 10px 0px 10px;
+  padding: 9px;
+  width: 100px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 400;
+  color: #161B27;
+  background-color: #F9E79F;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }

@@ -1,0 +1,41 @@
+/* .both{
+  display: grid;
+  color: #36454f;
+  background-color: whitesmoke;
+  color: #36454f;
+  grid-template-rows: auto;
+  grid-template-columns: 50vw;
+  grid-template-areas: 
+    "vivian"
+    "meimei"
+    "patsy";
+  place-items: center;
+}
+
+#vivian {
+  grid-area: vivian;
+  border: 3px solid;
+  border-color: #36454f;
+}
+
+#meimei {
+  grid-area: meimei;
+  border-color: #36454f;
+  border-radius: 3px;
+}
+
+#patsy {
+  grid-area: patsy;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-areas: "left" "right";
+  border-color: #36454f;
+}
+
+.leftp {
+  grid-area: left;
+}
+
+.rightp {
+  grid-area: right;
+} */

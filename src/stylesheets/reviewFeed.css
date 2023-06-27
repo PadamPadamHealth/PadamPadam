@@ -1,0 +1,33 @@
+.reviewFeed {
+  color: #36454f;
+  background-color: pink;
+}
+
+#post {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-areas: "left right";
+  border: 2px solid;
+  border-color: #36454f;
+  align-self: center;
+  padding: 10px;
+}
+
+#post-none {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-areas: "left right";
+  align-self: center;
+  padding: 10px;
+}
+
+.right {
+  grid-area: right;
+  padding-left: 10px;
+  
+}
+
+.left {
+  grid-area: left;
+  padding-left: 10px;
+}

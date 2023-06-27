@@ -4,8 +4,9 @@ import Login from './Login.js';
 import Overlay from './Overlay.js';
 import MainDisplay from './MainDisplay.js';
 import PostReview from './MainDisplayComponents/PostReview.js';
-let navbarImg = require('./assets/padam.png');
+let navbarImg = require('../assets/padam.png');
 import '../stylesheets/index.css'
+
 
 const App = () => {
 //   //first create user tokens and store in local memory. Will eventually store tokens in DB
@@ -16,18 +17,25 @@ const App = () => {
 // }
   return (
     <>
-      <h1>Padam Padam Health</h1>
+      
       <nav id='navbar'>
         <section id='left-nav'>
-        <img id='navbarImg' src={navbarImg.default} />
+          <img id='navbarImg' src={navbarImg.default} />
+        </section>
+        <section id='center-nav'>
+          <h1>Padam Padam Health</h1>
         </section>
         <section id='right-nav'>
-          <input placeholder="enter city or zip code"/>
-          <button id='search-btn'>
+          <input placeholder="enter city or zip code" className='search-bar' type='text' onChange={(event) => {
+            const { value } = event.target;
+            setZipcode(value.replace(/[^\d{5}]$/,"").sul)
+           }
+          }/>
+          <button id='search-btn' className='nav-btns'>
             Search
           </button>
           <Link to='/Login'>
-            <button id='login-btn'>
+            <button id='login-btn' className='nav-btns'>
               Log In
             </button>
           </Link>
