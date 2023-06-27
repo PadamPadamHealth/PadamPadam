@@ -78,8 +78,9 @@ const Filter = () => {
               <option value='they/them'>they/them</option>
               <option value='other'>other</option>
             </select><br/>
+            <label>...</label><br/>
             <button className='filter-btn'>
-              Filter
+              Submit
             </button>
           </form>
       </div>

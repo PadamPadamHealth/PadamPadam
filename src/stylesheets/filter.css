@@ -20,12 +20,13 @@
   color: #161B27;
 }
 .filter-btn {
-  margin: 10px 10px 10px 10px;
+  margin: 10px 0px 10px 0px;
   padding: 9px;
   width: 100px;
   border: none;
   border-radius: 8px;
-  font-weight: 400;
+  font-weight: 600;
+  font-size: 14px;
   color: #161B27;
   background-color: #F9E79F;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
